@@ -8,61 +8,20 @@ function getComputerChoice () {
 }
 
 
-
-// play one round of rps
-// function playRound (playerSelection, computerSelection) {
-
-//     playerSelection = playerSelection.toLowerCase();
-
-//     if (playerSelection == "rock") {
-//         if (computerSelection == "Rock") {
-//             return ["Tie!", 0, 0]
-//         }
-//         else if (computerSelection == "Paper") {
-//             return ["Paper Beats Rock! You Lose!", 0, 1]
-//         }
-//         else if (computerSelection == "Scissors") {
-//             return ["Rock Beats Scissors! You Win!", 1, 0]
-//         }
-
-//     }
-//     else if (playerSelection == "paper") {
-//         if (computerSelection == "Rock") {
-//             return ["Paper Beats Rock! You Win!", 1, 0]
-//         }
-//         else if (computerSelection == "Paper") {
-//             return ["Tie!", 0, 0]
-//         }
-//         else if (computerSelection == "Scissors") {
-//             return ["Scissors Beat Paper! You Lose!", 0, 1]
-//         }
-//     }
-//     else if (playerSelection == "scissors") {
-//         if (computerSelection == "Rock") {
-//             return ["Rock Beats Scissors! You Lose!", 0, 1]
-//         }
-//         else if (computerSelection == "Paper") {
-//             return ["Scissors Beat Paper! You Win!", 1, 0]
-//         }
-//         else if (computerSelection == "Scissors") {
-//             return ["Tie!", 0, 0]
-//         }
-//     }
-// }
-
-// lookup table for round results
+// lookup table for results
 const outcomes = {
     rock:    { rock: ['Tie!', 0, 0], paper: ['Paper Beats Rock! You Lose!', 0, 1], scissors: ['Rock Beats Scissors! You Win!', 1, 0] },
     paper:   { rock: ['Paper Beats Rock! You Win!', 1, 0], paper: ['Tie!', 0, 0], scissors: ['Scissors Beat Paper! You Lose!', 0, 1] },
     scissors: { rock: ['Rock beats scissors! You Lose!', 0, 1], paper: ['Scissors Beats Paper! You Win!', 1, 0], scissors: ['Tie!', 0.0] }
   };
 
+//   play one round
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     return outcomes[playerSelection][computerSelection]
 }
 
-
+//  play five rounds of the game and calculate a final score
 function game() {
     var playerScore = 0,
     computerScore = 0;
