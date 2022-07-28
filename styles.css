@@ -1,0 +1,13 @@
+/* styles.css */
+
+header {
+    font-size: 36px;
+    padding: 36px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+}
