@@ -20,13 +20,6 @@ const outcomes = {
     scissors : "images/scissors.png"
   };
 
-//   play one round
-// function playRound (playerSelection, computerSelection) {
-//     playerSelection = playerSelection.toLowerCase();
-//     console.log(outcomes[playerSelection][computerSelection]);
-// }
-
-
 
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
@@ -52,27 +45,11 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
-//  play five rounds of the game and calculate a final score
-// function game() {
-//     var playerScore = 0,
-//     computerScore = 0;
-//     for (let i = 0; i < 5; i++) {
-//         roundResult = playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice())
-//         playerScore += roundResult[1]
-//         computerScore += roundResult[2]
-//         console.log(roundResult[0])
-//     }
-//     console.log('Final Score- Player:', playerScore, 'Computer:', computerScore)
-// }
-
-// game()
-
-
-
-
-
+// places to display player and computer scores
 const player = document.querySelector(".playerscore > p");
 const computer = document.querySelector(".computerscore > p");
+
+// display message for results of a round
 const msg = document.querySelector(".msg");
 
 player.innerText = 0;
@@ -100,22 +77,3 @@ computerimgimg.style.width = '100px';
 
 
 
-// btn.forEach(btn => btn.addEventListener("click",
-//   () => ))  
-
-
-// create image variables
-// create lookup table of object images
-// add event listener to button loading images
-// or add image loading to playRound?
-
-// btn.addEventListener('click', function (e) {
-//     const audio = document.querySelector(`audio[data-key=${e.code}]`);
-//     const key = document.querySelector(`.key[data-key=${e.code}]`);
-//     if (!audio) return // stops function from running
-//     audio.currentTime = 0; // reset audio playing
-//     audio.play();
-
-//     key.classList.add('playing');
-    
-// });
