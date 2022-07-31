@@ -16,8 +16,8 @@ const outcomes = {
 
   const images = {
     rock : "images/rock.png",
-    paper : "images/paper2.png",
-    scissors : "images/scissors_PNG33.png"
+    paper : "images/paper.png",
+    scissors : "images/scissors.png"
   };
 
 //   play one round
